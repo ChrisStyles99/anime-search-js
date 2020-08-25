@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Sriracha', cursive;
+}
+
+.search-div {
+  text-align: center;
+}
+
+.search-div input {
+  padding: 12px;
+}
+
+.search-div button {
+  top: 2px;
+  position: relative;
+  left: -7px;
+  padding: 10px 15px;
+  border-radius: 0 12px 12px 0;
+  border: none;
+  background-color: #262626;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.anime-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  position: relative;
+  top: 30px;
+  gap: 10px;
+}
+
+.card {
+  margin: auto;
+  box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.5);
+  padding: 0 15px;
+  width: 50%;
+  height: auto;
+}
+
+.card-img {
+  position: relative;
+  top: 20px;
+  width: auto;
+}
+
+.card-content {
+  font-size: 1.2rem;
+  position: relative;
+  top: -10px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .anime-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-img img {
+    width: 190px;
+  }
+}
+
+@media (max-width: 576px) {
+  .anime-cards {
+    grid-template-columns: 1fr;
+  }
+}
