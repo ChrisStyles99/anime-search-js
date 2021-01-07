@@ -5,14 +5,21 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Sriracha', cursive;
+  background-color: #181818;
 }
 
 .search-div {
   text-align: center;
 }
 
+.search-div h2 {
+  color: #eeebea;
+}
+
 .search-div input {
+  border: none;
   padding: 12px;
+  background-color: #eeebea;
 }
 
 .search-div button {
@@ -22,7 +29,7 @@ body {
   padding: 10px 15px;
   border-radius: 0 12px 12px 0;
   border: none;
-  background-color: #262626;
+  background-color: #a17626;
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
@@ -30,47 +37,42 @@ body {
 
 .anime-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
-  position: relative;
-  top: 30px;
+  margin-top: 10px;
   gap: 10px;
 }
 
 .card {
   margin: auto;
-  box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.5);
-  padding: 0 15px;
-  width: 50%;
-  height: 100%;
+  box-shadow: 2px 4px 8px rgba(255, 255, 255, 0.3);
+  width: 90%;
+  border-radius: 12px;
+  transition: 0.3s ease all;
+  background-color: #eeebea;
 }
 
-.card-img {
-  position: relative;
-  top: 20px;
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 4px 8px rgba(255, 255, 255, 0.5);
+}
+
+.card-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
 }
 
 .card-content {
   font-size: 1.2rem;
-  position: relative;
-  top: -10px;
   width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 992px) {
   .anime-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .card-img img {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .card-img img {
-    width: 190px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
